@@ -3,6 +3,7 @@ package main.chapter_2;
 import java.lang.Character;
 /**
  * Created by cuijl on 12/15/16.
+ * 空格替换
  * 设计一种方法，将一个字符串中的所有空格替换成 %20 。你可以假设该字符串有足够的空间来加入新的字符，且你得到的是“真实的”字符长度。
  * example:
  * 对于字符串"Mr John Smith", 长度为 13

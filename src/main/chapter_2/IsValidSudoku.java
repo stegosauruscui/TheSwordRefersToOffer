@@ -21,12 +21,20 @@ public class IsValidSudoku {
             for(int j=0; j< board[i].length; ++j){
                 if(board[i][j] != '.'){
                     for(int m=j+1; m<board[i].length; ++m){
-                        if(board[i][m] != '.'  && board[i][j] <= '9' && board[i][m]>='0' && board[i][m] <= '9' && board[i][j] == board[i][m]){
+                        if( board[i][m] != '.'  &&
+                            board[i][j] <= '9' &&
+                            board[i][m]>='0' &&
+                            board[i][m] <= '9' &&
+                            board[i][j] == board[i][m]){
                             return false;
                         }
                     }
                     for(int m=i+1; m<board.length; ++m){
-                        if(board[m][j] != '.' && board[i][j] <='9' && board[m][j] >='0' && board[m][j] <= '9' && board[i][j] == board[m][j]){
+                        if( board[m][j] != '.' &&
+                            board[i][j] <='9' &&
+                            board[m][j] >='0' &&
+                            board[m][j] <= '9' &&
+                            board[i][j] == board[m][j]){
                             return false;
                         }
                     }
@@ -36,13 +44,25 @@ public class IsValidSudoku {
                     for(int x=i; x<i+3; ++x){
                         for(int y=j; y<j+3; ++y){
                             for(int z=y+1;z<j+3;++z){
-                                if (board[x][y] != '.' && board[x][z] != '.' && '0'<= board[x][y] && board[x][y] <= '9' && board[x][z] >='0' && board[x][z] <= '9' && board[x][y] == board[x][z]){
+                                if( board[x][y] != '.' &&
+                                    board[x][z] != '.' &&
+                                    '0'<= board[x][y] &&
+                                    board[x][y] <= '9' &&
+                                    board[x][z] >='0' &&
+                                    board[x][z] <= '9' &&
+                                    board[x][y] == board[x][z]){
                                     return false;
                                 }
                             }
                             for(int m=x+1; m < i+3; ++m){
                                 for(int n=j;n<j+3; ++n){
-                                    if (board[x][y] != '.' && board[m][n] != '.' && '0'<= board[x][y] && board[x][y] <= '9' && board[m][n] >='0' && board[m][n] <= '9' && board[x][y] == board[m][n]){
+                                    if (board[x][y] != '.' &&
+                                        board[m][n] != '.' &&
+                                        '0'<= board[x][y] &&
+                                        board[x][y] <= '9' &&
+                                        board[m][n] >='0' &&
+                                        board[m][n] <= '9' &&
+                                        board[x][y] == board[m][n]){
                                         return false;
                                     }
                                 }
